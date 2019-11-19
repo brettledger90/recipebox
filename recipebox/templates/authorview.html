@@ -1,0 +1,13 @@
+<h1>Master Creater of Tastiness</h1>
+<ul>
+    {% for a in author %}
+        <li>Name: {{a.name}}</li>
+        <li>About: {{a.biosection}}</li>
+    {% endfor %}
+
+</ul>
+<ul>
+    {% for au in author_recipe %}
+    <li> Concoction: <a href="/detail/{{au.id}}/">{{au.title}}</a></li>
+    {% endfor %}
+</ul>

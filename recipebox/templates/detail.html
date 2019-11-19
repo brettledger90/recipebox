@@ -1,0 +1,14 @@
+<h1>How to get tasty treats</h1>
+
+<ul>
+    {% for recipe in recipes %}
+   
+        <li>{{recipe.title}}</li>
+        <li><a href="/authorview/{{recipe.author.id}}/"> {{recipe.author}} </a></li>
+        <li>{{recipe.description}}</li>
+        <li>{{recipe.timerequired}} minutes</li>
+        <li>{{recipe.instructions}}</li>
+
+    {% endfor %}  
+
+</ul>

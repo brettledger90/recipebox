@@ -1,0 +1,7 @@
+<h1>Some tasty instructions</h1>
+<ul>
+    {% for i in data %}
+        <a href="/detail/{{i.id}}/"><li>{{i.title}}
+        </li></a>
+    {% endfor %}
+</ul>
