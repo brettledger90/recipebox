@@ -14,14 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from recipebox import models
 from recipebox import views
 from recipebox.forms import AuthorAdd
 from recipebox.forms import RecipeAdd
 
-admin.site.register(models.Author)
-admin.site.register(models.Recipe)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,6 +28,7 @@ urlpatterns = [
     path('detail/<int:id>/', views.detail),
     path('authorview/<int:id>/' , views.authorview),
     path('authoradd/', views.author_add),
-    path('recipeadd/', views.recipe_add)
+    path('recipeadd/', views.recipe_add),
+    path('accounts/', include('django.contrib.auth.urls'))
 
 ]
