@@ -24,11 +24,11 @@ from recipebox.forms import RecipeAdd
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
+    path('home/', views.index),
     path('detail/<int:id>/', views.detail),
     path('authorview/<int:id>/' , views.authorview),
     path('authoradd/', views.author_add),
     path('recipeadd/', views.recipe_add),
-    path('accounts/', include('django.contrib.auth.urls'))
+    path('', include('django.contrib.auth.urls'))
 
 ]
